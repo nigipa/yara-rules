@@ -15,7 +15,7 @@ rule fastposloader: posmalware{
 meta:
 	author = "Nikolaos Pantazopoulos"
 	date = "20/11/2016"
-  description = "FastPos malware"
+	description = "FastPos malware"
 
 strings:
 	
@@ -27,7 +27,7 @@ strings:
 	$string6 = "CLAXCSSPLS"
 	$string7 = "statuslog&log=kbinjected"
 	$string8 = "\\_hookLoader\\Release\\_hookLoader.pdb"
-  $string9 = "\\\\.\\mailslot\\trackslot"
+ 	$string9 = "\\\\.\\mailslot\\trackslot"
 condition:
 	all of($string*) and IsPE
 }
